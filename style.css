@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2? family = Poppins: wght @ 400; 700 & display = swap');
+
+body{
+    background: rgb(251,185,222);
+    background: linear-gradient(90deg, rgba(251,185,222,1) 0%, rgba(139,247,249,1) 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins" sans-serif;
+}
+
+.container {
+    min-height: 70%;
+    width: 80%;
+    height: 80%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    font-weight: bold;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    color: white;
+    padding: 0;
+    
+}
+
+nav ul li{
+    margin: 0 12px;
+    display: flex;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgb(197, 193, 193), 0 0 25px rgb(184, 183, 183), 0 0 5px rgb(194, 193, 193);
+}
+
+.active{
+    background: orangered;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.content{
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+    position: relative;
+}
+
+img{
+    position: absolute;
+    max-width: 50%;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    animation: move 2s infinite alternate ease-in-out;
+}
+
+.social-media{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    height: 100%;
+    color: white;
+    padding: 0;
+}
+
+.social-media li{
+    margin: 15px 30px;
+}
+
+.content-text{
+    color: white;
+    width: 100%;
+    padding: 0 50px;
+}
+
+.content-text h1, h3{
+    margin: 0;
+    text-shadow: 1px 1px 2px rgb(182, 180, 180), 0 0 25px rgb(182, 181, 181), 0 0 5px rgb(189, 188, 188);
+}
+
+.content-text h1{
+    font-size: 4rem;
+}
+
+.content-text .right{
+    text-align: right;
+    margin-top: 170px;
+}
+
+.content-text .left{
+    margin-top: -300px;
+}
+
+
+
+
+@keyframes move {
+    from {
+      transform: translate(-50%, -55%) rotate(-25deg);
+    }
+}
